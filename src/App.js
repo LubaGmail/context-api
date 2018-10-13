@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import {Family} from './Family';
-import MyProvider from './MyProvider';
+import PersonProvider from './PersonProvider';
 
 class App extends Component {
   render() {
     return (
-      <MyProvider>
+      <PersonProvider>
         <div>
           <p>I am the app</p>
           <Family/>
         </div>
-      </MyProvider>
+      </PersonProvider>
     );
   }
 }

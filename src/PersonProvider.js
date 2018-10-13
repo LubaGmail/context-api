@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {MyContext} from './MyContext';
+import {PersonContext} from './PersonContext';
 
-export default class MyProvider extends Component {
+export default class PersonProvider extends Component {
   state = {
     name: 'Wes',
     age: 100,
@@ -10,7 +10,7 @@ export default class MyProvider extends Component {
 
   render() {
     return (
-      <MyContext.Provider
+      <PersonContext.Provider
         value={{
         state: this.state,
         growAYearOlder: () => this.setState({
@@ -18,7 +18,7 @@ export default class MyProvider extends Component {
         })
       }}>
         {this.props.children}
-      </MyContext.Provider>
+      </PersonContext.Provider>
     )
   }
 }
